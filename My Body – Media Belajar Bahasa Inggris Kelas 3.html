@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Body – Bahasa Inggris Kelas 3</title>
+<style>
+:root{--b:#1e88e5;--bd:#0d47a1;--y:#ffd23f;--r:#ef476f;--bg:#e3f2fd;--card:#fff;--tx:#1b2a49;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d2247;--card:#16346b;--tx:#fff7d6;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Baloo 2","Comic Sans MS","Chalkboard SE",system-ui,sans-serif;font-size:18px}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px;background:var(--b);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+nav button{flex:0 0 auto;border:0;border-radius:20px;padding:8px 14px;font:inherit;font-size:15px;background:#fff;color:var(--bd);cursor:pointer}
+nav button.on{background:var(--y);font-weight:700}
+main{max-width:820px;margin:0 auto;padding:14px}
+section{display:none;background:var(--card);border:4px solid var(--b);border-radius:26px;padding:20px;text-align:center;animation:pop .4s}
+section.on{display:block}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@keyframes wig{25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+h1{color:var(--r);font-size:2.4em;margin:.2em 0}h2{color:var(--b);margin:.2em 0}
+.big{font-size:90px;display:inline-block;animation:bob 1.6s infinite}
+.btn{border:0;border-radius:18px;padding:12px 22px;font:inherit;font-weight:700;background:var(--r);color:#fff;cursor:pointer;box-shadow:0 5px 0 #a8264a;margin:6px;text-decoration:none;display:inline-block}
+.btn:active{transform:translateY(4px);box-shadow:none}
+.btn.y{background:var(--y);color:#5a3b00;box-shadow:0 5px 0 #c99a00}.btn.b{background:var(--b);box-shadow:0 5px 0 var(--bd)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:12px 0}
+.c{background:#fff9db;color:#1b2a49;border:3px solid var(--y);border-radius:18px;padding:10px;font:inherit;cursor:pointer;transition:.15s}
+.c:hover{transform:scale(1.06);border-color:var(--r)}
+.c .e{font-size:44px;display:block}.c b{font-size:20px;color:var(--bd)}.c small{display:block;color:#555}
+.c.ok{background:#c8f7c5;border-color:#2e9e44}.c.no{background:#ffd6dd;border-color:var(--r);animation:wig .4s}
+.say{background:var(--y);color:#5a3b00;border-radius:20px;padding:14px;font-size:28px;font-weight:700;margin:10px 0}
+.hero{font-size:80px;min-height:100px}.hero.go{animation:wig .6s}
+.fb{margin:12px 0;padding:12px;border-radius:16px;font-weight:600;display:none}
+.fb.g{display:block;background:#d9f7d6;color:#14532d}.fb.w{display:block;background:#ffe3e8;color:#7a1230}
+.tabs button{border:3px solid var(--b);background:#fff;color:var(--bd);border-radius:14px;padding:6px 14px;font:inherit;cursor:pointer;margin:2px}
+.tabs button.on{background:var(--b);color:#fff}
+.opts{display:grid;gap:10px;max-width:480px;margin:10px auto}
+.m2{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:460px;margin:10px auto}
+.bar{height:14px;background:#cfe6fb;border-radius:9px;overflow:hidden;margin-bottom:10px}.bar i{display:block;height:100%;background:var(--r);transition:width .4s}
+.stars{font-size:40px}
+</style></head>
+<body>
+<nav id="nav"></nav>
+<main>
+
+<section id="s0" class="on">
+<div class="big">🧒</div>
+<h1>My Body!</h1>
+<h2>Chapter 4 · Bahasa Inggris Kelas III SD</h2>
+<p>Hello, friends! 👋 Halo, teman-teman! Ayo belajar anggota tubuh dalam Bahasa Inggris!</p>
+<p>Nama: <input id="nm" placeholder="Tulis namamu" style="font:inherit;padding:8px;border-radius:12px;border:3px solid var(--y);text-align:center;max-width:220px"></p>
+<button class="btn" onclick="hi()">Let's Start! 🚀</button>
+<a class="btn y" href="https://www.youtube.com/watch?v=AlKXoHvwluA" target="_blank" rel="noopener">▶️ Tonton Video YouTube</a>
+<p id="hi"></p>
+</section>
+
+<section id="s1">
+<h2>🎯 Tujuan Belajar</h2>
+<div class="grid" style="text-align:left">
+<div class="c"><span class="e">📖</span>Aku bisa <b>membaca</b> nama anggota tubuh</div>
+<div class="c"><span class="e">✏️</span>Aku bisa <b>menulis</b> nama anggota tubuh</div>
+<div class="c"><span class="e">🗣️</span>Aku bisa <b>memandu teman</b> memakai instruksi</div>
+</div>
+<button class="btn" onclick="go(2)">Next ➡️</button>
+</section>
+
+<section id="s2">
+<h2>📚 Body Parts (Anggota Tubuh)</h2>
+<p>Klik kartu untuk mendengar bunyinya 🔊</p>
+<div class="grid" id="parts"></div>
+<h2>🎬 Action Words (Kata Perintah)</h2>
+<div class="grid" id="acts"></div>
+<div class="say" id="ex">Touch your nose! = Sentuh hidungmu!</div>
+<a class="btn y" href="https://www.youtube.com/watch?v=AlKXoHvwluA" target="_blank" rel="noopener">▶️ Video Belajar</a>
+<button class="btn" onclick="go(3)">Main Yuk! 🎮</button>
+</section>
+
+<section id="s3">
+<h2>🎮 Teacher Says!</h2>
+<div class="tabs"><button class="on" onclick="mode(0,this)">🎯 Ikuti Perintah</button><button onclick="mode(1,this)">🗣️ Jadi Pemandu</button></div>
+<div class="hero" id="hero">🧒</div>
+<div class="say" id="cmd"></div>
+<div id="m0"><p>Klik bagian tubuh yang benar!</p><div class="grid" id="gm"></div></div>
+<div id="m1" style="display:none"><p>Baca perintah ini keras-keras. Temanmu melakukan gerakannya! 🤸</p>
+<button class="btn b" onclick="spk(cur.t)">🔊 Dengarkan</button></div>
+<div class="fb" id="afb"></div>
+<p>⭐ Skor: <b id="sc">0</b></p>
+<button class="btn" onclick="nextCmd()">Perintah Baru 🎲</button>
+<button class="btn y" onclick="go(4)">Ke Kuis 📝</button>
+</section>
+
+<section id="s4">
+<h2>📝 Kuis Seru</h2>
+<div class="bar"><i id="pb"></i></div>
+<div id="q"></div>
+<div class="fb" id="qfb"></div>
+<button class="btn" id="nx" style="display:none" onclick="nextQ()">Next ➡️</button>
+</section>
+
+<section id="s5">
+<h2>💬 Umpan Balik & Refleksi</h2>
+<div class="stars" id="fs"></div>
+<div class="say" id="fm"></div>
+<p><b>Refleksi:</b> Centang yang sudah kamu bisa!</p>
+<div class="opts" style="text-align:left">
+<label><input type="checkbox"> Aku bisa membaca nama anggota tubuh 👀</label>
+<label><input type="checkbox"> Aku bisa menulis nama anggota tubuh ✏️</label>
+<label><input type="checkbox"> Aku bisa memandu temanku 🗣️</label>
+</div>
+<p>Perasaanku hari ini:</p>
+<div style="font-size:44px"><span style="cursor:pointer" onclick="mood('Yeay, kamu senang belajar! 🎉')">😄</span> <span style="cursor:pointer" onclick="mood('Bagus! Terus berlatih ya 👍')">🙂</span> <span style="cursor:pointer" onclick="mood('Tidak apa-apa, ayo coba lagi bersama! 💪')">😕</span></div>
+<p id="md"></p>
+<button class="btn" onclick="startQuiz();go(4)">Main Kuis Lagi 🔄</button>
+<a class="btn y" href="https://www.youtube.com/watch?v=AlKXoHvwluA" target="_blank" rel="noopener">▶️ Nonton Video Lagi</a>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const names=["Home","Goals","Learn","Play","Quiz","Reflect"],ic=["🏠","🎯","📚","🎮","📝","💬"];
+$("nav").innerHTML=names.map((n,i)=>`<button onclick="go(${i})">${ic[i]} ${n}</button>`).join("");
+function go(i){document.querySelectorAll("section").forEach((s,k)=>s.classList.toggle("on",k==i));
+document.querySelectorAll("nav button").forEach((b,k)=>b.classList.toggle("on",k==i));
+if(i==3&&!cur)nextCmd();if(i==4&&!qs.length)startQuiz();if(i==5)final();scrollTo(0,0)}
+function spk(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.8;speechSynthesis.speak(u)}catch(e){}}
+function hi(){const n=$("nm").value.trim();$("hi").textContent="Hello, "+(n||"friend")+"! Nice to meet you! 🌟";go(1)}
+const P=[["head","kepala","🧒"],["eyes","mata","👀"],["ears","telinga","👂"],["nose","hidung","👃"],["mouth","mulut","👄"],["hands","tangan","🙌"],["arm","lengan","💪"],["leg","kaki (paha-betis)","🦵"],["feet","telapak kaki","🦶"]];
+const A=[["Touch","sentuh","👉"],["Raise","angkat","🙋"],["Clap","tepuk","👏"],["Open","buka","📂"],["Close","tutup","🤐"],["Stamp","hentakkan","🥾"]];
+$("parts").innerHTML=P.map((p,i)=>`<button class="c" onclick="spk('${p[0]}')"><span class="e">${p[2]}</span><b>${p[0]}</b><small>${p[1]}</small></button>`).join("");
+$("acts").innerHTML=A.map(a=>`<button class="c" onclick="spk('${a[0]}');$('ex').textContent='${a[0]} your ... ! = ${a[1][0].toUpperCase()+a[1].slice(1)} ... -mu!'"><span class="e">${a[2]}</span><b>${a[0]}</b><small>${a[1]}</small></button>`).join("");
+// Simulation
+const C=[["Touch your head!",0,"head"],["Touch your nose!",3,"nose"],["Touch your ears!",2,"ears"],["Touch your eyes!",1,"eyes"],["Touch your mouth!",4,"mouth"],["Raise your hands!",5,"hands"],["Raise your arm!",6,"arm"],["Raise your leg!",7,"leg"],["Clap your hands!",5,"hands"],["Open your eyes!",1,"eyes"],["Close your eyes!",1,"eyes"],["Open your mouth!",4,"mouth"],["Close your mouth!",4,"mouth"],["Stamp your feet!",8,"feet"]];
+const HE={Touch:"🧒👆",Raise:"🙋",Clap:"👏",Open:"😲",Close:"😌",Stamp:"🥾💥"};
+let cur=null,score=0,md=0,locked=false;
+$("gm").innerHTML=P.map((p,i)=>`<button class="c" id="g${i}" onclick="pick(${i})"><span class="e">${p[2]}</span><b>${p[0]}</b></button>`).join("");
+function nextCmd(){let n;do{n=C[Math.random()*C.length|0]}while(cur&&n===cur);cur={t:n[0],i:n[1]};locked=false;
+$("cmd").textContent="Teacher says: "+n[0];$("hero").textContent="🧒";$("afb").className="fb";
+document.querySelectorAll("#gm .c").forEach(c=>c.className="c");if(md==0)spk(n[0])}
+function pick(i){if(locked||md)return;const b=$("g"+i),f=$("afb");
+if(i==cur.i){locked=true;b.classList.add("ok");score++;$("sc").textContent=score;
+$("hero").textContent=HE[cur.t.split(" ")[0]];$("hero").classList.remove("go");void $("hero").offsetWidth;$("hero").classList.add("go");
+f.className="fb g";f.textContent="Great job! Hebat! ⭐ "+cur.t.replace("!","")+" = benar!"}
+else{b.classList.add("no");f.className="fb w";f.textContent="Ups, belum tepat. Lihat lagi kata "+P[cur.i][0]+" = "+P[cur.i][1]+". Ayo coba lagi, kamu pasti bisa! 💪"}}
+function mode(m,b){md=m;document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+$("m0").style.display=m?"none":"block";$("m1").style.display=m?"block":"none";$("afb").className="fb";nextCmd()}
+// Quiz
+const MC=[
+{q:"We hear with our ___ 👂",o:["ears","eyes","nose"],a:0,ex:"Ears artinya telinga. Kita mendengar dengan telinga."},
+{q:"“Touch your nose!” artinya...",o:["Sentuh hidungmu","Tepuk hidungmu","Buka hidungmu"],a:0,ex:"Touch artinya sentuh, nose artinya hidung."},
+{q:"“Stamp your feet!” artinya...",o:["Angkat kakimu","Hentakkan kakimu","Tutup kakimu"],a:1,ex:"Stamp artinya hentakkan, feet artinya kaki."},
+{q:"Teman berkata “Raise your hand!”. Apa yang kamu lakukan? 🙋",o:["Tepuk tangan","Tutup tangan","Angkat tangan"],a:2,ex:"Raise artinya angkat, hand artinya tangan."}];
+const MT={match:1,pairs:[["Eyes","Mata"],["Clap","Tepuk"],["Close","Tutup"],["Mouth","Mulut"]]};
+let qs=[],qi=0,qsc=0;
+const sh=a=>a.map(x=>[Math.random(),x]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);
+function startQuiz(){qs=sh([...MC,MT]);qi=0;qsc=0;showQ()}
+function showQ(){const q=qs[qi];$("pb").style.width=(qi/5*100)+"%";$("qfb").className="fb";$("nx").style.display="none";
+if(q.match)return showMatch(q);
+const o=sh(q.o.map((t,i)=>[t,i==q.a]));
+$("q").innerHTML=`<p><b>Soal ${qi+1}/5 · Pilihan Ganda</b></p><div class="say">${q.q}</div><div class="opts">`+o.map((x,i)=>`<button class="btn b" data-ok="${x[1]}" onclick="ans(this,'${q.ex}')">${x[0]}</button>`).join("")+"</div>"}
+function ans(b,ex){const ok=b.dataset.ok=="true";document.querySelectorAll("#q .opts button").forEach(x=>{x.disabled=true;if(x.dataset.ok=="true")x.style.background="#2e9e44"});
+if(!ok)b.style.background="var(--r)";
+const f=$("qfb");if(ok){qsc++;f.className="fb g";f.textContent="Excellent! Hebat sekali, jawabanmu benar! 🌟 Kamu bintang kelas! "+ex}
+else{f.className="fb w";f.textContent="Belum tepat. "+ex+" Jangan menyerah, kamu pasti bisa lebih baik! 💪"}done()}
+function done(){$("nx").style.display="inline-block";$("nx").textContent=qi==4?"Lihat Hasil 🏆":"Next ➡️"}
+function nextQ(){if(qi==4){go(5);return}qi++;showQ()}
+let sel=null,mist=0,left=0;
+function showMatch(q){sel=null;mist=0;left=q.pairs.length;const r=sh(q.pairs.map(p=>p[1]));
+$("q").innerHTML=`<p><b>Soal ${qi+1}/5 · Mencocokkan</b></p><div class="say">Cocokkan Inggris dengan artinya!</div><div class="m2"><div>`+
+q.pairs.map(p=>`<button class="btn b" style="display:block;width:100%" data-w="${p[1]}" onclick="selL(this)">${p[0]}</button>`).join("")+`</div><div>`+
+r.map(t=>`<button class="btn y" style="display:block;width:100%" data-w="${t}" onclick="selR(this)">${t}</button>`).join("")+"</div></div>"}
+function selL(b){if(b.disabled)return;document.querySelectorAll("#q .b").forEach(x=>x.style.outline="");sel=b;b.style.outline="4px solid var(--r)"}
+function selR(b){if(!sel||b.disabled)return;const f=$("qfb");
+if(sel.dataset.w==b.dataset.w){sel.disabled=b.disabled=true;sel.style.opacity=b.style.opacity=.45;sel.style.outline="";sel=null;left--;
+f.className="fb g";f.textContent="Pintar! Pasangan benar! ✅";
+if(!left){if(!mist)qsc++;f.textContent=mist?"Semua pasangan selesai! Hebat sudah berusaha sampai akhir 👏":"Perfect! Semua pasangan benar tanpa salah! 🌟 Kamu keren!";done()}}
+else{mist++;f.className="fb w";f.textContent="Belum cocok. Baca lagi kata Inggrisnya pelan-pelan lalu pikirkan artinya. Ayo coba lagi, semangat! 💪"}}
+function final(){const n=qsc,m=["Ayo belajar lagi, kita pasti bisa! 💪","Bagus! Terus berlatih ya! 👍","Keren! Hampir sempurna! 🎉","Super! Kamu juara My Body! 🏆"];
+if(!qs.length){$("fs").textContent="⭐";$("fm").textContent="Ayo main kuis dulu ya! 📝";return}
+$("fs").textContent="⭐".repeat(Math.max(1,Math.round(n*3/5)))+"☆".repeat(3-Math.max(1,Math.round(n*3/5)));
+$("fm").textContent="Skor: "+n+"/5 — "+m[n>=5?3:n>=4?2:n>=2?1:0]}
+function mood(t){$("md").textContent=t}
+go(0);
+</script></body></html>
